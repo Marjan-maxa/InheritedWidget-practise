@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:state_manage/todo_controller.dart';
+import 'package:state_manage/todo_screen.dart';
 void main() {
   runApp( MyApp());
 }
@@ -15,13 +17,14 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (context)=>CounterController()),
         ChangeNotifierProvider(create: (context)=>AbcController()),
+        ChangeNotifierProvider(create: (context)=>TodoController()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
           colorScheme: .fromSeed(seedColor: Colors.deepPurple),
         ),
-        home:  MyHomePage(title: 'Flutter Demo Home Page'),
+        home: TodoScreen()
       ),
     );
   }
