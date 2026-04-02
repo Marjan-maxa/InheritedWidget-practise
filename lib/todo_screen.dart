@@ -15,7 +15,7 @@ class _TodoScreenState extends State<TodoScreen> {
     final todoController = context.read<TodoController>();
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
+        centerTitle: false,
         backgroundColor: Colors.red,
         title: const Text('Todo Screen',style: TextStyle(
           fontSize: 25,
